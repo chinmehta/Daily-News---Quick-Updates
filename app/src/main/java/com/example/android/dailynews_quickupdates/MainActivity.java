@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private static final int NEWS_LOADER_ID = 1;
     private NewsAdapter mAdapter;
 
-    /** TextView that is displayed when the list is empty */
+    /** TextView that
+     *  is displayed when the
+     *  list is empty */
     private TextView mEmptyStateTextView;
 
 
