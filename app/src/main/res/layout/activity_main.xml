@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.dailynews_quickupdates.MainActivity">
+
+
+    <ListView
+        android:id="@+id/list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#b24545"
+        android:layout_centerInParent = "true"
+        android:dividerHeight="2dp"/>
+
+    <com.hamza.slidingsquaresloaderview.SlidingSquareLoaderView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/empty_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sslv_color="#ff0000"
+        app:sslv_delay="15"
+        app:sslv_duration="150"
+        app:sslv_gap="2dp"
+        app:sslv_square_length="20dp"
+        app:sslv_start="true" />
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+
+</android.support.v4.widget.DrawerLayout>
